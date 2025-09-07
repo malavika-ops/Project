@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    width: 100%;
+    height: 120vh;
+    background-image: linear-gradient(rgba(35, 35, 35, 0.911),rgba(35, 35, 35, 0.911)),url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+
+.header{
+    position: relative;
+    padding-top: 80px;
+    padding-right: 40px;
+    padding-bottom: 2rem;
+    padding-left: 20px;
+}
+
+.header .navbar{
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: center;
+    display: flex;
+}
+
+.content{
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+.content h1{
+    margin-left: 50px;
+    margin-right: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.content #registerform{
+    margin-top: 50px;
+}
+
+.content #registerform .registerinfo{
+    margin-bottom: 10px;
+    width: 50%;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid grey;
+    transition: 0.5s;
+    color: white;
+}
+
+.content #registerform .registerinfo::placeholder{
+    color: white;
+}
+
+.content #registerform .registerinfo:hover{
+    background-color: rgba(128, 128, 128, 0.404);
+    border-radius: 20px;
+}
+
+.content #registerform button{
+    width: 25%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: grey;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 17.5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+
+.content #registerform button:hover{
+    background-color: black;
+    color: white;
+}
+
+.content #registerform p{
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.content #registerform p a{
+    color: grey;
+    font-weight: bold;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.content #registerform p a:hover{
+    color: white;
+}

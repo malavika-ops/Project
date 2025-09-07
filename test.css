@@ -1,0 +1,80 @@
+body{
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+
+.start-container, .results-container, .container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 8px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: 0.8s;
+}
+
+button:hover{
+    background-color: grey;
+}
+
+.answer-option{
+    display: block;
+    margin: 10px 0;
+}
+
+#timer{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.results-container{
+    text-align: center;
+}
+
+.achievements{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.results-container a{
+    background-color: black;
+    color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.8s;
+}
+
+.results-container a:hover{
+    background-color: grey;
+}

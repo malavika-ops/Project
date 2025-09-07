@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+
+.bonsaia a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.bonsaia a:hover{
+    color: grey;
+}
+
+.bonsaia a i{
+    padding-right: 10px;
+}
+
+.bonsaia .bonsaiatitle{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px grey;
+    margin-top: 20px;
+    background-color: rgba(128, 128, 128, 0.295);
+}
+
+.row{
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.row .column h3{
+    color: white;
+    margin-left: 10px;
+}
+
+.row .column a{
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.row .column a:hover{
+    color: rgb(95, 95, 133);
+}

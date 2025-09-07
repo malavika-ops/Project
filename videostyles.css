@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+
+header{
+    background-color: grey;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main{
+    padding: 20px;
+}
+
+h2{
+    color: white;
+}
+
+p{
+    color: rgb(167, 167, 167);
+}
+
+.head a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.head a:hover{
+    color: grey;
+}
+
+.head a i{
+    padding-right: 10px;
+}
+
+.video-container{
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}

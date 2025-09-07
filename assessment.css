@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+
+body{
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(43, 43, 43, 0.616);
+}
+
+.sidemenu{
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 211, 211);
+    padding-top: 25px;
+    padding-left: 10px;
+    border-right: 1px solid rgb(43, 43, 43);
+    transition: background-color 2s ease;
+}
+
+.sidemenu header{
+    position: relative;
+}
+
+.sidemenu header .logocontent{
+    align-items: center;
+}
+
+.logo{
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.sidemenu .logocontent .logo img{
+    margin-left: 0;
+    width: 150px;
+}
+
+.sidemenu header .togglebutton{
+    top: 15%;
+    right: -13px;
+    height: 30px;
+    width: 28px;
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidemenu li{
+    margin-top: 10px;
+    height: 35px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.sidemenu li .menuicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 100%;
+    color: rgb(71, 71, 71);
+    margin-right: 5px;
+}
+
+.sidemenu .menulinks{
+    width: 10px;
+    display: colums;
+}
+
+.sidemenu .text{
+    font-size: 13px;
+    color: rgb(71, 71, 71);
+    margin-left: 5px;
+}
+
+.sidemenu li a{
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.sidemenu li a:hover{
+    background-color: rgb(104, 104, 104);
+}
+
+.sidemenu li a .active{
+    display: flex;
+    border-radius:5px;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(104, 104, 104);
+}
+
+.sidemenu .sidemenubar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidemenubar .lightdarkmode .lightanddark{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 60px;
+    width: 50%;
+    position: relative;
+}
+
+.sidemenubar .lightdarkmode i{
+    display: flex;
+    align-items: left;
+    position: absolute;
+}
+
+.sidemenubar .lightdarkmode .lightdarkmodetoggle{
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-left: 80px;
+}
+
+.sidemenubar .lightdarkmode .lightdarkmodetoggle .lightanddarkswitch{
+    background-color: black;
+    height: 20px;
+    width: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.lightanddarkswitch::before{
+    background-color: rgb(219, 219, 219);
+    top: 11.5%;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+}
+
+.lightanddarkswitch.switch-right::before{
+    transform: translateX(14px);
+}
+
+.darkbody{
+    background-color: black;
+}
+
+.darksidemenu{
+    background-color: grey;
+    border-right: 1px solid white;
+    transition: background-color 1.0 ease;
+}
+
+.darksidemenu a .menutext{
+    color: white;
+}
+
+.darksidemenu li a:hover{
+    background-color: black;
+}
+
+.bodyheadcontent{
+    background-color: rgb(211, 211, 211);
+    width: 100%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    float: right;
+    padding: 10px;
+    font-size: 16px;
+    height: 60px;
+    transition: background-color 1s ease;
+}
+
+.bodyheadcontent p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.bodyheadcontent a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkbodyheadcontent{
+    background-color: grey;
+}
+
+.darksidemenu header .togglebutton{
+    color: white;
+}
+
+.darksidemenu header .togglebutton{
+    color: white;
+}
+
+.bodyheadcontent a{
+    color: white;
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 35px;
+    margin-top: 2px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.8s;
+}
+
+.bodyheadcontent a:hover{
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.sidemenu.collapsed{
+    width: 70px;
+}
+
+.sidemenu.collapsed .menulinks{
+    width: 10px;
+}
+
+.sidemenu.collapsed .text{
+    display: none;
+}
+
+.sidemenu.collapsed .menulinks:hover .menutext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 80px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(211, 211, 211);
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.sidemenu.collapsed .logo img{
+    width: 50px;
+}
+
+.sidemenu.collapsed .togglebutton{
+    right: -25px;
+}
+
+.sidemenu.collapsed .lightdarkmode{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.sidemenu.collapsed .lightdarkmode .lightdarkmodetoggle{
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.sidemenu.collapsed .lightdarkmode .lightdarkmodetoggle .lightanddarkswitch{
+    background-color: black;
+    height: 20px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.userwelcome{
+    cursor: pointer;
+}
+
+.userdropdown{
+    display: none;
+    position: absolute;
+    background-color: rgba(109, 109, 109, 0.829);
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: 200px;
+    border-radius: 20px;
+}
+
+.userdropdown p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    margin-left: 35px;
+    text-align: center;
+}
+
+.userdropdown a{
+    width: 70%;
+    margin-left: 35px;
+    text-align: center;
+}
+
+.userdropdown p, .userdropdown a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9px;
+}
+
+.userdropdown a:hover{
+    background-color: rgb(73, 72, 72);
+}
+
+.assessmenttitle{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.assessmenttitle h1{
+    margin-left: 130px;
+    font-size: 50px;
+    color: white;
+}
+
+.assessments .assessmentlist{
+    margin-left: 100px;
+    margin-right: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.assessmentitem{
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: #080925ab;
+}
+
+.assessmentitem h2{
+    padding: 30px;
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: white;
+}
+
+.assessmentitem a{
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.8s;
+}
+
+.assessmentitem a:hover{
+    background-color: grey;
+}

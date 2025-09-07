@@ -1,0 +1,595 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+
+body{
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(43, 43, 43, 0.616);
+}
+
+.sidemenu{
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 211, 211);
+    padding-top: 25px;
+    padding-left: 10px;
+    border-right: 1px solid rgb(43, 43, 43);
+    transition: background-color 2s ease;
+}
+
+.sidemenu header{
+    position: relative;
+}
+
+.sidemenu header .logocontent{
+    align-items: center;
+}
+
+.logo{
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.sidemenu .logocontent .logo img{
+    margin-left: 0;
+    width: 150px;
+}
+
+.sidemenu header .togglebutton{
+    top: 15%;
+    right: -13px;
+    height: 30px;
+    width: 28px;
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidemenu li{
+    margin-top: 10px;
+    height: 35px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+
+.sidemenu li .menuicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 100%;
+    color: rgb(71, 71, 71);
+}
+
+.sidemenu .menulinks{
+    width: 10px;
+    display: colums;
+}
+
+.sidemenu .text{
+    font-size: 13px;
+    color: rgb(71, 71, 71);
+    margin-left: 5px;
+}
+
+.sidemenu li a{
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.sidemenu li a:hover{
+    background-color: rgb(104, 104, 104);
+}
+
+.sidemenu .sidemenubar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidemenubar .lightdarkmode .lightanddark{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 60px;
+    width: 50%;
+    position: relative;
+}
+
+.sidemenubar .lightdarkmode i{
+    display: flex;
+    align-items: left;
+    position: absolute;
+}
+
+.sidemenubar .lightdarkmode .lightdarkmodetoggle{
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-left: 80px;
+}
+
+.sidemenubar .lightdarkmode .lightdarkmodetoggle .lightanddarkswitch{
+    background-color: black;
+    height: 20px;
+    width: 40px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.lightanddarkswitch::before{
+    background-color: rgb(219, 219, 219);
+    top: 11.5%;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+}
+
+.lightanddarkswitch.switch-right::before{
+    transform: translateX(14px);
+}
+
+.darkbody{
+    background-color: black;
+}
+
+.darksidemenu{
+    background-color: grey;
+    border-right: 1px solid white;
+    transition: background-color 1.0 ease;
+}
+
+.darksidemenu a .menutext{
+    color: white;
+}
+
+.darksidemenu li a:hover{
+    background-color: black;
+}
+
+.bodyheadcontent{
+    background-color: rgb(211, 211, 211);
+    width: 100%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    float: right;
+    padding: 10px;
+    font-size: 16px;
+    height: 60px;
+    transition: background-color 1s ease;
+}
+
+.bodyheadcontent p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.bodyheadcontent a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkbodyheadcontent{
+    background-color: grey;
+}
+
+.darksidemenu header .togglebutton{
+    color: white;
+}
+
+.darksidemenu header .togglebutton{
+    color: white;
+}
+
+.bodyheadcontent a{
+    color: white;
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 35px;
+    margin-top: 2px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.8s;
+    margin-bottom: 100px;
+}
+
+.bodyheadcontent a:hover{
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.sidemenu.collapsed{
+    width: 70px;
+}
+
+.sidemenu.collapsed .menulinks{
+    width: 10px;
+}
+
+.sidemenu.collapsed .text{
+    display: none;
+}
+
+.sidemenu.collapsed .menulinks:hover .menutext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 80px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(211, 211, 211);
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.sidemenu.collapsed .logo img{
+    width: 50px;
+}
+
+.sidemenu.collapsed .togglebutton{
+    right: -25px;
+}
+
+.sidemenu.collapsed .lightdarkmode{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.sidemenu.collapsed .lightdarkmode .lightdarkmodetoggle{
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.sidemenu.collapsed .lightdarkmode .lightdarkmodetoggle .lightanddarkswitch{
+    background-color: black;
+    height: 20px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.userwelcome{
+    cursor: pointer;
+}
+
+.userdropdown{
+    display: none;
+    position: absolute;
+    background-color: rgba(109, 109, 109, 0.829);
+    margin-top: 40px;
+    padding-top: 20px;
+    min-width: 200px;
+    border-radius: 20px;
+    height: 120px;
+}
+
+.userdropdown p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    margin-left: 35px;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.userdropdown a{
+    width: 100%;
+    border-radius: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-bottom: 10px;
+}
+
+.userdropdown p, .userdropdown a{
+    color: white;
+    text-decoration: none;
+    padding-top: 9px;
+}
+
+.userdropdown a:hover{
+    background-color: rgb(73, 72, 72);
+}
+
+.profiletitle{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.profiletitle #title{
+    margin-left: 130px;
+    font-size: 50px;
+    color: white;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #080925ab;
+    border: 5px solid #cfcfcf;
+    border-radius: 8px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 100px;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profileinfo{
+    flex: 1;
+}
+
+.profileinfo #usersname{
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    color: rgb(190, 190, 190);
+}
+
+.profileinfo #usersemail{
+    color: rgb(190, 190, 190);
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.profileeditbuttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.profilebutton{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.profilebutton:hover{
+    background-color: grey;
+}
+
+.popupwindow{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popupcontent{
+    background-color: #77777785;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.popupwindow.show .popupcontent{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popupwindow h2{
+    margin-top: 20px;
+}
+
+.popupcontent form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.popupcontent input{
+    margin-bottom: 10px;
+    background-color: rgba(63, 63, 63, 0.89);
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom:20px;
+}
+
+.popupcontent .modifyusername{
+    color: white;
+    font-weight: lighter;
+}
+
+.popupcontent .modifyfirstname{
+    color: white;
+    font-weight: lighter;
+}
+
+.popupcontent .modifylastname{
+    color: white;
+    font-weight: lighter;
+}
+
+.popupcontent .modifyemail{
+    color: white;
+    font-weight: lighter;
+}
+
+.popupcontent button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.popupcontent button:hover{
+    background-color: grey;
+}
+
+.sidemenu li a .active{
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(104, 104, 104);
+}
+
+.resetpasspopup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.resetpasspopupcontent{
+    background-color: #77777785;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.resetpasspopup.show .resetpasspopupcontent{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.resetpasspopup h2{
+    margin-top: 20px;
+}
+
+.resetpasspopupcontent form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.resetpasspopupcontent input{
+    margin-bottom: 10px;
+    background-color: rgba(63, 63, 63, 0.89);
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.resetpasspopupcontent .oldpass{
+    color: white;
+    font-weight: lighter;
+}
+
+.resetpasspopupcontent .newpass{
+    color: white;
+    font-weight: lighter;
+}
+
+.resetpasspopupcontent .confirmpass{
+    color: white;
+    font-weight: lighter;
+}
+
+.resetpasspopupcontent button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.resetpasspopupcontent button:hover{
+    background-color: grey;
+}
